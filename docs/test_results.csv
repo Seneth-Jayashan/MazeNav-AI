@@ -1,0 +1,55 @@
+Method,Trial,Goal,Goal_x,Goal_y,Start_x,Start_y,Success,Status,Time_s,Path_Length_m,Collisions,Min_Clearance_m,Ref_Length_m,Cell_Route_m,Efficiency_pct
+Nav2 (Dijkstra),1,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,15.07,0.733,0,0.171,0.676,1.000,92.2
+Nav2 (Dijkstra),1,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,86.38,5.365,0,0.148,4.610,6.500,85.9
+Nav2 (Dijkstra),1,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,14.88,0.741,0,0.169,0.676,1.000,91.2
+Nav2 (Dijkstra),2,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,14.98,0.756,0,0.173,0.676,1.000,89.4
+Nav2 (Dijkstra),2,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,90.33,5.346,0,0.146,4.610,6.500,86.2
+Nav2 (Dijkstra),2,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,15.11,0.761,0,0.169,0.676,1.000,88.8
+Nav2 (Dijkstra),3,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,15.31,0.762,0,0.170,0.676,1.000,88.7
+Nav2 (Dijkstra),3,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,87.44,5.329,0,0.157,4.610,6.500,86.5
+Nav2 (Dijkstra),3,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,15.18,0.761,0,0.173,0.676,1.000,88.8
+Nav2 (A*),1,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,15.13,0.743,0,0.173,0.676,1.000,90.9
+Nav2 (A*),1,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,85.56,5.284,0,0.136,4.610,6.500,87.2
+Nav2 (A*),1,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,15.24,0.778,0,0.167,0.676,1.000,86.8
+Nav2 (A*),2,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,15.39,0.764,0,0.163,0.676,1.000,88.4
+Nav2 (A*),2,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,85.77,5.301,0,0.147,4.610,6.500,87.0
+Nav2 (A*),2,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,14.74,0.760,0,0.173,0.676,1.000,88.9
+Nav2 (A*),3,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,15.25,0.756,0,0.169,0.676,1.000,89.4
+Nav2 (A*),3,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,86.46,5.316,0,0.152,4.610,6.500,86.7
+Nav2 (A*),3,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,14.62,0.733,0,0.169,0.676,1.000,92.2
+DQN (subgoal),1,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,13.40,0.651,0,0.142,0.626,1.000,96.1
+DQN (subgoal),1,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,66.30,5.278,6,0.000,4.560,6.500,86.4
+DQN (subgoal),1,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,9.80,0.705,0,0.122,0.626,1.000,88.7
+DQN (subgoal),2,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,11.40,0.684,0,0.138,0.626,1.000,91.5
+DQN (subgoal),2,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,71.90,5.227,7,0.000,4.560,6.500,87.2
+DQN (subgoal),2,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,12.30,0.766,3,0.120,0.626,1.000,81.7
+DQN (subgoal),3,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,17.50,0.644,0,0.160,0.626,1.000,97.2
+DQN (subgoal),3,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,66.80,5.242,4,0.000,4.560,6.500,87.0
+DQN (subgoal),3,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,9.80,0.727,0,0.123,0.626,1.000,86.1
+DQN (subgoal) + shield,1,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,12.70,0.591,0,0.168,0.626,1.000,105.9
+DQN (subgoal) + shield,1,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,0,6,180.00,4.145,10,0.000,4.560,6.500,
+DQN (subgoal) + shield,1,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,10.00,0.706,0,0.161,0.626,1.000,88.6
+DQN (subgoal) + shield,2,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,25.50,0.664,0,0.133,0.626,1.000,94.2
+DQN (subgoal) + shield,2,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,0,6,180.10,4.176,18,0.000,4.560,6.500,
+DQN (subgoal) + shield,2,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,14.10,0.728,0,0.139,0.626,1.000,85.9
+DQN (subgoal) + shield,3,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,13.30,0.692,0,0.167,0.626,1.000,90.4
+DQN (subgoal) + shield,3,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,0,6,180.10,4.100,9,0.000,4.560,6.500,
+DQN (subgoal) + shield,3,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,18.80,0.700,0,0.125,0.626,1.000,89.4
+DQN (final goal),1,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,8.10,0.626,0,0.174,0.626,1.000,99.9
+DQN (final goal),1,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,0,6,180.00,3.235,31,0.000,4.560,6.500,
+DQN (final goal),1,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,5.20,0.669,0,0.165,0.626,1.000,93.5
+DQN (final goal),2,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,6.40,0.596,0,0.141,0.626,1.000,105.0
+DQN (final goal),2,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,0,6,180.10,4.236,28,0.000,4.560,6.500,
+DQN (final goal),2,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,14.10,1.449,0,0.151,0.626,1.000,43.2
+DQN (final goal),3,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,6.90,0.624,0,0.157,0.626,1.000,100.3
+DQN (final goal),3,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,0,6,180.00,4.443,27,0.000,4.560,6.500,
+DQN (final goal),3,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,5.30,0.616,1,0.000,0.626,1.000,101.6
+"DQN (subgoal, retrained)",1,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,11.10,0.682,0,0.128,0.626,1.000,91.7
+"DQN (subgoal, retrained)",1,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,54.30,5.398,0,0.149,4.560,6.500,84.5
+"DQN (subgoal, retrained)",1,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,9.00,0.714,0,0.175,0.626,1.000,87.6
+"DQN (subgoal, retrained)",2,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,10.30,0.681,0,0.162,0.626,1.000,91.9
+"DQN (subgoal, retrained)",2,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,55.70,5.467,0,0.134,4.560,6.500,83.4
+"DQN (subgoal, retrained)",2,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,9.30,0.697,0,0.176,0.626,1.000,89.8
+"DQN (subgoal, retrained)",3,Goal 1 (Corridor Junction),-0.25,-0.75,-0.750,-1.250,1,4,10.80,0.690,0,0.137,0.626,1.000,90.7
+"DQN (subgoal, retrained)",3,Goal 2 (Central Passage),0.75,0.75,-0.250,-0.750,1,4,54.00,5.418,0,0.125,4.560,6.500,84.2
+"DQN (subgoal, retrained)",3,Goal 3 (Far Maze Destination),1.25,1.25,0.750,0.750,1,4,9.20,0.690,0,0.166,0.626,1.000,90.7

@@ -1,0 +1,11 @@
+{
+  // Editor-only settings for Pylance/Pyright. The code runs under ROS 2 in WSL,
+  // so ROS packages (rclpy, launch, nav2_*, tf2_ros) and torch are not visible
+  // to the Windows Python interpreter VS Code uses for analysis.
+  "include": ["src", "scripts"],
+  "exclude": ["build", "install", "log", "**/__pycache__"],
+  "extraPaths": ["src/maze_dqn", "src/goal_interface"],
+  "typeCheckingMode": "off",
+  "reportMissingImports": "none",
+  "reportMissingModuleSource": "none"
+}

@@ -1,0 +1,96 @@
+# SLAM Toolbox online_async parameters for the maze (used by slam.launch.py).
+# Identical to slam_toolbox's stock config/mapper_params_online_async.yaml (Jazzy) except
+# the lines marked [maze]:
+# - Frames: odometry comes from imu_odom.py (wheel speed + IMU gyro heading) on its own TF
+#   tree odom_imu -> base_footprint_imu -> base_scan_imu, with /scan republished as /scan_imu.
+#   Wheel odometry alone loses ~3 deg of heading per 90 deg turn in this world; over a 7 min
+#   exploration it drifted 0.44 m / 18 deg, the gyro version stayed within 4 cm of the true
+#   position with no heading drift.
+# - use_scan_matching and do_loop_closing off: with that odometry the scan matcher only made
+#   the map worse in this repetitive maze (it doubled walls and dropped part of the east
+#   outer wall). Maps are built from the odometry poses; the map is still built from /scan.
+#   Measured against the true walls (5 cm grid): 100% of wall pixels within 10 cm, 99.9% of
+#   wall faces mapped, 4 stray pixels (scan matching on: 75-95% within 10 cm, 147-320 stray).
+# - resolution 0.05 -> 0.025 m: walls are 5 cm thick, so at 5 cm per cell the grid alone can
+#   misplace a wall by up to a cell; at 2.5 cm the mean wall error fell from 2.4 to 1.8 cm.
+# - max_laser_range 20.0 -> 1.5: only nearby walls are drawn, so a small heading error cannot
+#   smear walls on the far side of the maze.
+slam_toolbox:
+  ros__parameters:
+
+    # Plugin params
+    solver_plugin: solver_plugins::CeresSolver
+    ceres_linear_solver: SPARSE_NORMAL_CHOLESKY
+    ceres_preconditioner: SCHUR_JACOBI
+    ceres_trust_strategy: LEVENBERG_MARQUARDT
+    ceres_dogleg_type: TRADITIONAL_DOGLEG
+    ceres_loss_function: None
+
+    # ROS Parameters
+    odom_frame: odom_imu          # [maze] wheel + gyro odometry from imu_odom.py
+    map_frame: map
+    base_frame: base_footprint_imu
+    scan_topic: /scan_imu
+    use_map_saver: true
+    mode: mapping #localization
+
+    # if you'd like to immediately start continuing a map at a given pose
+    # or at the dock, but they are mutually exclusive, if pose is given
+    # will use pose
+    #map_file_name: test_steve
+    # map_start_pose: [0.0, 0.0, 0.0]
+    #map_start_at_dock: true
+
+    debug_logging: false
+    throttle_scans: 1
+    transform_publish_period: 0.02 #if 0 never publishes odometry
+    map_update_interval: 5.0
+    resolution: 0.025   # [maze] stock: 0.05 (see header)
+    restamp_tf: false
+    min_laser_range: 0.0 #for rastering images
+    max_laser_range: 1.5 # [maze] stock: 20.0
+    minimum_time_interval: 0.5
+    transform_timeout: 0.2
+    tf_buffer_duration: 30.0
+    stack_size_to_use: 40000000 #// program needs a larger stack size to serialize large maps
+    enable_interactive_mode: true
+
+    # General Parameters
+    use_scan_matching: false   # [maze] stock: true (see header)
+    use_scan_barycenter: true
+    minimum_travel_distance: 0.5
+    minimum_travel_heading: 0.5
+    check_min_dist_and_heading_precisely: false
+    scan_buffer_size: 10
+    scan_buffer_maximum_scan_distance: 10.0
+    link_match_minimum_response_fine: 0.1  
+    link_scan_maximum_distance: 1.5
+    loop_search_maximum_distance: 3.0
+    do_loop_closing: false     # [maze] stock: true (see header)
+    loop_match_minimum_chain_size: 10           
+    loop_match_maximum_variance_coarse: 3.0  
+    loop_match_minimum_response_coarse: 0.35    
+    loop_match_minimum_response_fine: 0.45
+
+    # Correlation Parameters - Correlation Parameters
+    correlation_search_space_dimension: 0.5
+    correlation_search_space_resolution: 0.01
+    correlation_search_space_smear_deviation: 0.1 
+
+    # Correlation Parameters - Loop Closure Parameters
+    loop_search_space_dimension: 8.0
+    loop_search_space_resolution: 0.05
+    loop_search_space_smear_deviation: 0.03
+
+    # Scan Matcher Parameters
+    distance_variance_penalty: 0.5      
+    angle_variance_penalty: 1.0    
+
+    fine_search_angle_offset: 0.00349     
+    coarse_search_angle_offset: 0.349   
+    coarse_angle_resolution: 0.0349        
+    minimum_angle_penalty: 0.9
+    minimum_distance_penalty: 0.5
+    use_response_expansion: true
+    min_pass_through: 2
+    occupancy_threshold: 0.1

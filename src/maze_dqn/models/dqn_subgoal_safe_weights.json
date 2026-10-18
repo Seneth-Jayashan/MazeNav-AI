@@ -1,0 +1,11 @@
+{
+  "subgoal": true,
+  "collision_dist": 0.15,
+  "turn_rate": 0.5,
+  "wall_penalty_dist": 0.2,
+  "episodes": 4000,
+  "seed": 1,
+  "kept_checkpoint": "best evaluation, episode 2200 (2/3 test goals, 82 % random full-maze)",
+  "selected_from": "4 seeds; chosen by random full-maze success",
+  "episodes_run": 3300
+}

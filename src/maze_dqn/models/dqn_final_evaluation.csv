@@ -1,0 +1,22 @@
+Agent,Task,Episodes,Successes,Collisions,Steps
+dqn,Goal A,1,0,1,35
+dqn,Goal B,1,0,0,902
+dqn,Goal C,1,0,0,1041
+dqn,"random pairs, distance 1-2 cells",50,39,8,
+dqn,"random pairs, distance 3-5 cells",50,16,7,
+dqn,"random pairs, distance 8-10 cells",50,0,4,
+dqn,"random pairs, distance 22-24 cells",50,0,0,
+dqn_subgoal,Goal A,1,0,0,150
+dqn_subgoal,Goal B,1,1,0,406
+dqn_subgoal,Goal C,1,1,0,466
+dqn_subgoal,"random pairs, distance 1-2 cells",50,44,1,
+dqn_subgoal,"random pairs, distance 3-5 cells",50,30,1,
+dqn_subgoal,"random pairs, distance 8-10 cells",50,25,5,
+dqn_subgoal,"random pairs, distance 22-24 cells",50,22,6,
+dqn_subgoal_safe,Goal A,1,0,0,
+dqn_subgoal_safe,Goal B,1,1,0,
+dqn_subgoal_safe,Goal C,1,1,0,
+dqn_subgoal_safe,"random pairs, distance 1-2 cells",50,47,1,
+dqn_subgoal_safe,"random pairs, distance 3-5 cells",50,39,7,
+dqn_subgoal_safe,"random pairs, distance 8-10 cells",50,43,4,
+dqn_subgoal_safe,"random pairs, distance 22-24 cells",50,48,0,
